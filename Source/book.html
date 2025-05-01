@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book a Stay - CitySnooze Hostel</title>
+
+    <!-- Bootstrap 5 CSS -->
+    <link rel="stylesheet" type="text/css" href="Additional-Files/Bootstrap-Packages/css/bootstrap.min.css">
+</head>
+
+<body style="background-image: url('Additional-Files/Pictures/Background.jpg'); background-size: cover; background-position: center; background-attachment: fixed;">
+
+    <div class="modal fade" id="SUBMIT" tabindex="-1" aria-labelledby="SUBMIT" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="SUBMIT">Details Submitted</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p>Your details have been uploaded. We will inform you when your details get verified on your given
+                        phone number.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Okay</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-md navbar-light">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">The CitySnooze Hostel</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="home1.html" data-bs-toggle="popover" title="Home" data-bs-content="Explore our homepage"
+                            data-bs-trigger="hover">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="facilities.html" data-bs-toggle="popover" title="Facilities"
+                            data-bs-content="Discover our facilities" data-bs-trigger="hover">Facilities</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" data-bs-toggle="popover" title="Book Now"
+                            data-bs-content="Reserve your spot with us" data-bs-trigger="hover">Book Now</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" data-bs-toggle="offcanvas" data-bs-target="#contactUsOffcanvas"
+                            aria-controls="contactUsOffcanvas" title="Contact Us" data-bs-content="Get in touch with us"
+                            data-bs-trigger="hover">Contact Us</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Booking Form Section -->
+    <div class="container mt-5">
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+                <form class="row g-3 needs-validation" novalidate>
+                    <div class="col-md-6">
+                        <label for="validationCustom01" class="form-label text-white">First name</label>
+                        <input type="text" class="form-control" id="validationCustom01" value="Tanmay" required>
+                        <div class="valid-feedback">
+                            Looks good!!
+                        </div>
+                    </div>
+
+                    <div class="col-md-6">
+                        <label for="validationCustom02" class="form-label text-white">Last name</label>
+                        <input type="text" class="form-control" id="validationCustom02" value="Mevada" required>
+                        <div class="valid-feedback">
+                            Looks good!!
+                        </div>
+                    </div>
+
+                    <div class="col-md-6">
+                        <label for="validationCustomPhone" class="form-label text-white">Phone Number</label>
+                        <input type="tel" class="form-control" id="validationCustomPhone" placeholder="1234567890" required>
+                        <div class="invalid-feedback">
+                            Please enter a valid phone number.
+                        </div>
+                    </div>
+
+                    <div class="col-md-6">
+                        <label for="validationCustomAge" class="form-label text-white">Age</label>
+                        <input type="number" class="form-control" id="validationCustomAge" placeholder="18" required>
+                        <div class="invalid-feedback">
+                            Please enter a valid age.
+                        </div>
+                    </div>
+
+                    <div class="col-md-12">
+                        <label for="validationCustomEmail" class="form-label text-white">Email Address</label>
+                        <div class="input-group has-validation">
+                            <span class="input-group-text" id="inputGroupPrepend">@</span>
+                            <input type="email" class="form-control" id="validationCustomEmail"
+                                aria-describedby="inputGroupPrepend" required>
+                            <div class="invalid-feedback">
+                                Please enter a valid email address.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-8">
+                        <label for="validationCustom03" class="form-label text-white">City</label>
+                        <input type="text" class="form-control" id="validationCustom03" value="Your Home City" required>
+                        <div class="invalid-feedback">
+                            Please provide a valid city.
+                        </div>
+                    </div>
+
+                    <div class="col-md-4">
+                        <label for="roomType" class="form-label text-white">Room Type</label>
+                        <select class="form-select" id="roomType" required>
+                            <option selected disabled value="">Choose...</option>
+                            <option value="sharing">Sharing</option>
+                            <option value="personal">Personal</option>
+                        </select>
+                        <div class="invalid-feedback">
+                            Please select a room type.
+                        </div>
+                    </div>
+
+                    <div class="col-md-12">
+                        <label for="rentDisplay" class="form-label text-white">Rent</label>
+                        <input type="text" class="form-control" id="rentDisplay" readonly>
+                    </div>
+
+                    <div class="col-md-12">
+                        <label for="validationCustomPhoto" class="form-label text-white">Upload Your Photo</label>
+                        <input type="file" class="form-control" id="validationCustomPhoto" required>
+                        <div class="invalid-feedback">
+                            Please upload a photo.
+                        </div>
+                    </div>
+
+                    <div class="col-12">
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
+                            <label class="form-check-label text-white" for="invalidCheck">
+                                Agree to terms and conditions
+                            </label>
+                            <div class="invalid-feedback">
+                                You must agree before submitting.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-12 text-center">
+                        <button class="btn btn-primary" type="submit" style="margin-bottom: 20px;">Submit form</button>
+                    </div>
+                    
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Offcanvas for Contact Us -->
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="contactUsOffcanvas" aria-labelledby="contactUsOffcanvasLabel">
+        <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="contactUsOffcanvasLabel">Contact Us</h5>
+            <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+            <p>Welcome to CitySnooze Hostel. If you have any questions or inquiries, feel free to contact us using the information below:</p>
+
+            <ul>
+                <li>Email: info@citysnooze.com</li>
+                <li>Phone: +91 9429016055</li>
+                <li>Address: Near Public Garden,VVN-Gujarat</li>
+            </ul>
+
+            <p>We look forward to hearing from you!</p>
+        </div>
+    </div>
+
+    <!-- Footer Section -->
+    <footer class="text-light text-center py-4">
+        <div class="container">
+            <p>&copy; CitySnooze Hostel</p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap 5 JS and Popper.js -->
+    <script src="Additional-Files/Bootstrap-Packages/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Script for disabling form submissions if there are invalid fields -->
+    <script>
+        (() => {
+            'use strict'
+
+            // Fetch all the forms we want to apply custom Bootstrap validation styles to
+            const forms = document.querySelectorAll('.needs-validation')
+
+            // Loop over them and prevent submission
+            Array.from(forms).forEach(form => {
+                form.addEventListener('submit', event => {
+                    if (!form.checkValidity()) {
+                        event.preventDefault()
+                        event.stopPropagation()
+                    }
+
+                    form.classList.add('was-validated')
+                }, false)
+            })
+
+            // Update rent display based on room type selection
+            const roomTypeSelect = document.getElementById('roomType');
+            const rentDisplay = document.getElementById('rentDisplay');
+
+            roomTypeSelect.addEventListener('change', () => {
+                const selectedRoomType = roomTypeSelect.value;
+
+                // Set rent based on the selected room type
+                if (selectedRoomType === 'sharing') {
+                    rentDisplay.value = '7000 Per month';
+                } else if (selectedRoomType === 'personal') {
+                    rentDisplay.value = '13000 Per month';
+                } else {
+                    rentDisplay.value = '';
+                }
+            });
+        })();
+    </script>
+
+    <!-- Bootstrap Popover Script -->
+    <script>
+        var popoverTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="popover"]'))
+        var popoverList = popoverTriggerList.map(function (popoverTriggerEl) {
+            return new bootstrap.Popover(popoverTriggerEl, {
+                container: 'body'
+            })
+        })
+    </script>
+
+    <!-- Bootstrap Offcanvas Script for Contact Us -->
+    <script>
+        var contactUsOffcanvas = new bootstrap.Offcanvas(document.getElementById('contactUsOffcanvas'))
+    </script>
+
+</body>
+
+</html>
